@@ -1,0 +1,15 @@
+sodo eopkg git
+sudo eopkg linux-headers
+
+
+
+git clone https://github.com/lwfinger/rtlwifi_new.git 
+
+cd rtlwifi_new
+git checkout rock.new_btcoex
+make
+sudo make install
+
+sudo modprobe -rv rtl8723be
+sudo modprobe -v rtl8723be ant_sel=2
+
