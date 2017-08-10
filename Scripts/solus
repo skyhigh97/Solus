@@ -1,1 +1,16 @@
 sudo eopkg up
+sudo eopkg install -c system.devel
+sudo eopkg install kernel-headers
+
+git clone https://github.com/lwfinger/rtlwifi_new/
+cd rtlwifi_new
+make
+sudo make install
+
+sudo modprobe -rv rtl8723be
+sudo modprobe -v rtl8723be ant_sel=2
+
+
+sudo eopkg rm lightdm
+sudo eopkg install gdm gnome-shell gnome-desktop-branding
+https://github.com/adapta-project/adapta-gtk-theme

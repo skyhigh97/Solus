@@ -1,2 +1,24 @@
 sudo apt-get update
 sudo apt-get upgrade
+
+sudo apt-get install linux-headers-generic build-essential
+
+git clone https://github.com/lwfinger/rtlwifi_new/
+cd rtlwifi_new
+make
+sudo make install
+
+sudo modprobe -rv rtl8723be
+sudo modprobe -v rtl8723be ant_sel=2
+
+#https://askubuntu.com/questions/590414/wifi-problems-with-rtl8723be-in-ubuntu-14-04
+
+
+sudo apt-get install gnome
+sudo dpkg-reconfigure gdm  
+
+sudo apt-add-repository ppa:tista/adapta
+sudo apt-get update && sudo apt-get install adapta-gtk-theme
+
+https://github.com/adapta-project/adapta-gtk-theme
+
